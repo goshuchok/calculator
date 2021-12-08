@@ -18,8 +18,8 @@ function calculate() {
   const sb = document.getElementById('money').value;
   const pb = document.getElementById('litr').value;
 
-  const consumption = (pb / pyt) * 100;
-  const average = (sb * consumption) / 100;
+  const consumption = ((pb / pyt) * 100).toFixed(2);
+  const average = ((sb * consumption) / 100).toFixed(2);
   const total = average * pyt;
 
   document.getElementById('total_fuel_cost').value = total;
@@ -50,8 +50,8 @@ function calculation() {
   const kilometrs = document.getElementById('kilometr');
   const kilometr = document.getElementById('kilometring');
 
-  const fuelCons = (distances / 100) * fuel;
-  const averageCost = (gas * fuel) / 100;
+  const fuelCons = ((distances / 100) * fuel).toFixed(2);
+  const averageCost = ((gas * fuel) / 100).toFixed(2);
   const totalCost = gas * fuelCons;
   kilometrs.innerText = distances;
   kilometr.innerText = distances;
